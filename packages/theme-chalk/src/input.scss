@@ -184,7 +184,8 @@
     vertical-align: middle;
     display: table-cell;
     position: relative;
-    border: $--border-base;
+    //border: $--border-base;
+    border: 2px $--border-style-base $--border-color-base;
     border-radius: $--input-border-radius;
     padding: 0 20px;
     width: 1px;

@@ -3,7 +3,7 @@
       'el-form-item--feedback': elForm && elForm.statusIcon,
       'is-error': validateState === 'error',
       'is-validating': validateState === 'validating',
-      'is-success': validateState === 'success',
+      'is-success': validateState === 'success' && showSuccess,
       'is-required': isRequired || required
     },
     sizeClass ? 'el-form-item--' + sizeClass : ''
@@ -70,7 +70,8 @@
         type: Boolean,
         default: true
       },
-      size: String
+      size: String,
+      showSuccess: Boolean
     },
     watch: {
       error: {
