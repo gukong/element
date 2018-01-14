@@ -10,8 +10,7 @@
   white-space: nowrap;
   cursor: pointer;
   background: $--button-default-fill;
-  border: $--border-base;
-  border-color: $--button-default-border;
+  border: 1px $--border-style-base $--color-text-regular;
   color: $--button-default-color;
   -webkit-appearance: none;
   text-align: center;
