@@ -116,11 +116,18 @@ const PopupManager = {
     if (modalStack.length > 0) {
       const topItem = modalStack[modalStack.length - 1];
       if (topItem.id === id) {
+        const nextItem = modalStack.length > 1 && modalStack[modalStack.length - 2];
         if (topItem.modalClass) {
           let classArr = topItem.modalClass.trim().split(/\s+/);
-          classArr.forEach(item => removeClass(modalDom, item));
+          classArr.forEach(item => {
+            if (nextItem.modalClass && nextItem.modalClass.includes(item)) {
+              return;
+            }
+            setTimeout(() => {
+              removeClass(modalDom, item);
+            }, 300);
+          });
         }
-
         modalStack.pop();
         if (modalStack.length > 0) {
           modalDom.style.zIndex = modalStack[modalStack.length - 1].zIndex;

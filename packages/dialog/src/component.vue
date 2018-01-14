@@ -1,5 +1,5 @@
 <template>
-  <transition name="dialog-fade">
+  <transition name="dialog-slide-down">
     <div class="el-dialog__wrapper" v-show="visible" @click.self="handleWrapperClick">
       <div
         class="el-dialog"
@@ -76,7 +76,7 @@
 
       showClose: {
         type: Boolean,
-        default: true
+        default: false
       },
 
       width: String,
@@ -90,12 +90,16 @@
 
       top: {
         type: String,
-        default: '15vh'
+        default: '0'
       },
       beforeClose: Function,
       center: {
         type: Boolean,
         default: false
+      },
+      modalClass: {
+        type: String,
+        default: 'translate-modal'
       }
     },
 
