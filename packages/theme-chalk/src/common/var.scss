@@ -64,7 +64,7 @@ $--border-color-lighter: #ebeef5 !default;
 $--border-color-extra-light: #f2f6fc !default;
 $--border-color-hover: $--color-text-placeholder !default;
 $--border-base: $--border-width-base $--border-style-base $--border-color-base !default;
-$--border-radius-base: 10px !default;
+$--border-radius-base: 8px !default;
 $--border-radius-small: 2px !default;
 $--border-radius-circle: 100% !default;
 
@@ -83,7 +83,7 @@ $--fill-base: $--color-white !default;
 $--font-path: 'fonts' !default;
 $--font-size-base: 14px !default;
 $--font-size-small: 13px !default;
-$--font-size-large: 18px !default;
+$--font-size-large: 20px !default;
 $--font-color-disabled-base: #bbb !default;
 $--font-weight-primary: 500 !default;
 $--font-line-height-primary: 24px !default;
@@ -471,7 +471,7 @@ $--dialog-close-hover-color: $--color-primary !default;
 $--dialog-title-font-size: $--font-size-large !default;
 $--dialog-font-size: 14px !default;
 $--dialog-line-height: $--font-line-height-primary !default;
-$--dialog-padding-primary: 15px !default;
+$--dialog-padding-primary: 40px !default;
 
 /* Table
 -------------------------- */
