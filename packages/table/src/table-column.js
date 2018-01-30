@@ -38,7 +38,7 @@ const forced = {
         value={ this.isAllSelected } />;
     },
     renderCell: function(h, { row, column, store, $index }) {
-      return <div class="auto-show-box-cell"><el-checkbox
+      return <div class="auto-show-box-cell" on-click={ (ev) => {ev.stopPropagation();}}><el-checkbox
         class="auto-display-checkbox"
         value={ store.isSelected(row) }
         disabled={ column.selectable ? !column.selectable.call(null, row, $index) : false }

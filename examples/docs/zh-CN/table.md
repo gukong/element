@@ -309,6 +309,10 @@
 
       deleteRow(index, rows) {
         rows.splice(index, 1);
+      },
+      
+      rowClick() {
+        console.log('click row');
       }
     },
 
@@ -1188,9 +1192,9 @@
     ref="multipleTable"
     :data="tableData3"
     border
-    :auto-checkbox="true"
     tooltip-effect="dark"
     style="width: 100%"
+    @row-click="rowClick"
     @selection-change="handleSelectionChange">
     <el-table-column
       type="selection"
